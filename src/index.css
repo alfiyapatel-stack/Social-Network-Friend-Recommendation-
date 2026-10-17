@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-cream text-burgundy antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white rounded-3xl border border-rose/30 shadow-soft;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition-all duration-200 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-primary {
+    @apply btn bg-gradient-to-r from-wine to-burgundy text-white shadow-md hover:shadow-lg hover:-translate-y-0.5;
+  }
+  .btn-soft {
+    @apply btn bg-blush text-wine hover:bg-rose/40;
+  }
+  .btn-ghost {
+    @apply btn border border-rose text-wine hover:bg-blush;
+  }
+  .chip {
+    @apply inline-flex items-center gap-1 rounded-full bg-blush px-2.5 py-0.5 text-xs font-medium text-wine;
+  }
+  .input {
+    @apply w-full rounded-xl border border-rose/60 bg-white px-3 py-2 text-sm text-burgundy outline-none focus:border-wine focus:ring-2 focus:ring-rose/40;
+  }
+  .page {
+    @apply mx-auto max-w-7xl px-4 py-8 sm:py-10;
+  }
+}
